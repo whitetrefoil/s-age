@@ -14,6 +14,20 @@ The `index.js` file under project's root directory and the `test` directory are 
 Will leave it untouched for easier merging.
 
 
+Usage
+-----
+
+```typescript
+import age from '@whitetrefoil/s-age-ts'
+
+// anything string Date() accepts.
+const myAge: number = age('2016-05-05')  // => a number like 2
+
+// Can pass an optional second parameter if you want to know the age at date other than today.
+const howOldAmIAt20200504: number = age('2016-05-05', '2020-05-04')
+```
+
+
 Changelog
 ---------
 
