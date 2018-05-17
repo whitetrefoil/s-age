@@ -20,7 +20,7 @@ Usage
 ```typescript
 import age from '@whitetrefoil/s-age-ts'
 
-// anything string Date() accepts.
+// Anything Date() accepts.
 const myAge: number = age('2016-05-05')  // => a number like 2
 
 // Can pass an optional second parameter if you want to know the age at date other than today.
