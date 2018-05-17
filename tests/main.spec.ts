@@ -56,10 +56,10 @@ describe('the original tests', () => {
 
 
   test('should accept dateStrings', () => {
-    expect(age('Aug 3 2012')).toBe(3 + fix)
+    expect(age('Aug 3 2012')).toBe(fix + 3)
   })
 
   test('should accept timestamps', () => {
-    expect(age(1343977200000)).toBe(3 + fix) // same as aug 3 2012
+    expect(age(1343977200000)).toBe(fix + 3) // same as aug 3 2012
   })
 })
