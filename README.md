@@ -1,6 +1,18 @@
-# s-age
+s-age-ts
+==========
 
-[![NPM version](https://img.shields.io/npm/v/s-age.svg)](https://www.npmjs.com/package/s-age) ![Dependencies](https://img.shields.io/david/sebastiansandqvist/s-age.svg) [![build status](http://img.shields.io/travis/sebastiansandqvist/s-age.svg)](https://travis-ci.org/sebastiansandqvist/s-age) [![NPM license](https://img.shields.io/npm/l/s-age.svg)](https://www.npmjs.com/package/s-age)
+Fork Note
+---------
+
+This is forked from [Sebastian Sandqvist](https://github.com/sebastiansandqvist)'s [s-age](https://github.com/sebastiansandqvist/s-age), for TS support and better integrated UT in my team's projects.
+
+This forked one will be available as `@whitetrefoil/s-age-ts` while the original one is `s-age`.
+
+This forked one will use `whitetrefoil` as the main branch and leave the original `master` untouched.
+
+Below this line is the **ORIGINAL** README (except title & badges):
+
+--------------------
 
 ## Usage
 `s-age` is a function that calculates years since a date. Input can be a date string, timestamp, or `Date` object.
