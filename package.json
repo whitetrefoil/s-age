@@ -1,29 +1,87 @@
 {
-  "name": "s-age",
-  "version": "1.1.2",
+  "name": "@whitetrefoil/s-age-ts",
+  "version": "2.0.0",
   "description": "Calculate years since a date (eg. a person's age given date of birth)",
-  "main": "index.js",
+  "main": "lib/common/main.js",
+  "module": "lib/esm/main.js",
+  "typings": "lib/types/main.d.ts",
   "scripts": {
-    "coverage": "nyc --reporter=lcov --reporter=text ava",
-    "test": "ava"
+    "prepublishOnly": "node scripts/prepublish-checklist.js && npm run build",
+    "build": "rimraf lib && tsc && tsc -p tsconfig.common.json",
+    "publish": "echo \"Done publishing, don't forget to:\n  1. **dist-tag** your channel in npm.\n  2. bump version in package.json\nGood luck with the publish ;)\"",
+    "test": "tslint -p . && jest --no-cache"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sebastiansandqvist/s-age.git"
+    "url": "git+https://github.com/whitetrefoil/s-age-ts.git"
   },
   "keywords": [
     "age",
     "calculator",
     "date"
   ],
-  "author": "sebastian sandqvist",
+  "author": "WhiteTrefoil <whitetrefoil@gmail.com>",
+  "contributors": [
+    "sebastian sandqvist"
+  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sebastiansandqvist/s-age/issues"
+  "files": [
+    "lib/**/*.js",
+    "lib/types/**/*.d.ts",
+    "README.md"
+  ],
+  "directories": {
+    "test": "tests"
   },
-  "homepage": "https://github.com/sebastiansandqvist/s-age#readme",
+  "bugs": {
+    "url": "https://github.com/whitetrefoil/s-age-ts/issues"
+  },
+  "homepage": "https://github.com/whitetrefoil/s-age-ts#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {},
   "devDependencies": {
-    "ava": "0.24.0",
-    "nyc": "11.4.1"
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.1.0",
+    "@whitetrefoil/check-dependencies": "^0.1.2",
+    "jest": "^23.0.0-charlie.2",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,js}",
+      "!**/*.d.ts"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/~.*"
+    ],
+    "coverageDirectory": "test_results",
+    "coverageReporters": [
+      "clover",
+      "lcov",
+      "text-summary"
+    ],
+    "globals": {
+      "ts-jest": {
+        "skipBabel": false
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "moduleNameMapper": {},
+    "setupFiles": [],
+    "testRegex": "(/__tests__/.*|(\\.|/)spec)\\.(js|ts)$",
+    "transform": {
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    }
   }
 }
