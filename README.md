@@ -13,7 +13,18 @@ This forked one will use `whitetrefoil` as the main branch and leave the origina
 The `index.js` file under project's root directory and the `test` directory are the original ones.
 Will leave it untouched for easier merging.
 
-Below this line is the **ORIGINAL** README (except title & badges):
+
+Changelog
+---------
+
+### v2.0.0
+
+* Initial (for this forked one) release.
+
+
+--------------------
+
+Below this line is the **ORIGINAL** README (except the title & badges):
 
 --------------------
 
